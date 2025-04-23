@@ -65,6 +65,6 @@ def generar_consolidado(numero):
 def responder(mensaje):
     return f"<?xml version='1.0' encoding='UTF-8'?><Response><Message>{mensaje}</Message></Response>", 200, {'Content-Type': 'application/xml'}
 
-if _name_ == '_main_':
+if __name__ == '_main_':
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port)
