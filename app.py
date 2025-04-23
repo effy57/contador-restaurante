@@ -3,7 +3,7 @@ from flask import Flask, request
 import csv
 import time
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 # Lista para almacenar el conteo de ingresos por minuto
 conteo_por_minuto = []
@@ -46,7 +46,7 @@ def finalizar():
     # Enviar el archivo CSV como respuesta
     return "El consolidado ha sido generado.", 200
 
-if _name_ == '_main_':
+if __name__ == '_main_':
     # Asignar el puerto para Render
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port)
