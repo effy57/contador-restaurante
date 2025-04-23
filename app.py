@@ -4,7 +4,7 @@ from collections import defaultdict
 import csv
 import os
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 # Almacenamiento en memoria por número de usuario
 usuarios = defaultdict(lambda: defaultdict(int))
