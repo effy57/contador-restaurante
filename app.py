@@ -3,7 +3,7 @@ import time
 import csv
 from flask import Flask, request
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 # Variables globales
 conteo_por_minuto = []
@@ -44,6 +44,6 @@ def finalizar():
     return f"Consolidado por minuto:\n{respuesta}", 200
 
 
-if _name_ == '_main_':
+if __name__ == '_main_':
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port)
